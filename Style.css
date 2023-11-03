@@ -1,0 +1,148 @@
+/* Estilo para el cuerpo de la página */
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Color de fondo opcional */
+}
+
+#form {
+    width: 400px; /* Ancho deseado del formulario */
+    margin: 0 auto; /* Centrado horizontalmente */
+    padding: 20px;
+    border: 2px solid #333; /* Borde de 2px sólido de color oscuro (#333) */
+    border-radius: 10px; /* Bordes redondeados de 10px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra con opacidad */
+
+    /* Centrado verticalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilo para los campos de entrada */
+.input {
+    background-color: #f5f5f5; /* Color de fondo ligeramente más oscuro (#f5f5f5) */
+    border: 1px solid #6f6a6a; /* Borde de 1px sólido de color gris (#ccc) */
+    border-radius: 5px; /* Bordes redondeados de 5px */
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.input::placeholder {
+    color: #666; /* Cambia el color del placeholder a #666 (gris más claro) */
+}
+
+/* Estilo para el contenedor principal */
+#division {
+    text-align: center; /* Alinear contenido al centro */
+    background-color: #fff; /* Color de fondo opcional */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el texto principal */
+h1 {
+    font-size: 24px; /* Tamaño de fuente más pequeño */
+    margin: 0; /* Eliminar margen superior predeterminado */
+}
+
+/* Estilo para el formulario y su leyenda */
+#form {
+    margin: 0px 0;
+}
+
+legend h3 {
+    font-size: 18px; /* Tamaño de fuente más pequeño */
+}
+
+/* Estilo para las etiquetas de entrada y los campos de entrada */
+.input-group label {
+    display: block; /* Mostrar etiquetas en una línea nueva */
+    margin: 10px 0;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+.input-group input {
+    width: 100%; /* Ancho completo */
+    padding: 5px;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+/* Estilo para el botón "Agregar fila" */
+#agregarFila {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilo para las celdas de la tabla */
+th, td {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+/* Estilo para el botón "Guardar cambios" */
+input[type="submit"] {
+    display: block; /* Mostrar el botón en una línea nueva */
+    margin-top: 20px;
+    font-size: 16px; /* Tamaño de fuente más grande para destacar */
+}
+
+#grilla {
+    border-collapse: collapse; /* Colapsar bordes de la tabla */
+    width: 100%; /* Ancho completo */
+}
+
+#grilla th, #grilla td {
+    border: 1px solid #000; /* Bordes de 1px sólido de color negro (#000) */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilo para la columna izquierda con gradiente */
+/* Estilo para el contenedor de las columnas */
+.columns {
+    display: flex;
+}
+
+/* Estilo para la columna izquierda con gradiente */
+.column.is-one-third.has-background-primary {
+    padding: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex; /* Usar flexbox en la columna izquierda */
+    flex-direction: column; /* Aplicar flexbox en dirección de columna */
+    align-items: stretch; /* Asegurar que la columna izquierda ocupe toda la altura */
+    
+}
+
+.column.is-one-third.has-background-primary + .column {
+    padding-left: 0;
+}
+
+/* Estilo para centrar contenido vertical y horizontalmente */
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegura que el contenido se extienda para llenar la columna */
+}
+
+/* Estilo para la tabla en la columna derecha */
+.column table {
+    width: 100%;
+}
+
+/* Ajusta el icono de la bandera según tus necesidades */
+.centered-content i {
+    font-size: 64px !important; /* Tamaño del icono (ajusta el valor según tu preferencia) */
+    color: rgb(255, 255, 255) !important; /* Color blanco del icono */
+}

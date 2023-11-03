@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilla </title>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div id="division">
+        <h1>WebDeveloper</h1>
+        <form action="recibido.html" method="get" id="form" onsubmit="saveData()">
+            <legend><h3>Formulario</h3></legend>
+            <div class="field">
+                <div class="control has-icons-left">
+                    <input class="input" type="text" name="nombre" id="name" placeholder="Nombre">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control has-icons-left">
+                    <input class="input" type="email" name="email" id="email" placeholder="Email">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control has-icons-left">
+                    <input class="input" type="text" name="numero" id="numero" placeholder="Número">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control is-expanded">
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" name="gustos" id="gustos" placeholder="Gustos">
+                        </div>
+                    </div>
+                </div>
+                <div class="control">
+                    <button id="agregarFila" class="button is-primary">Agregar fila</button>
+                </div>
+            </div>
+            <div class="columns">
+                <!-- Columna izquierda con gradiente verde -->
+                <div class="column is-one-third has-background-primary">
+                    <div class="centered-content">
+                        <i class="fas fa-flag"></i> <!-- Icono de bandera -->
+                    </div>
+                </div>
+            
+                <!-- Columna derecha con la tabla -->
+                <div class="column">
+                    <table id="grilla">
+                        <thead>
+                            <tr>
+                                <th>Gustos</th>
+                                <th>%</th>
+                                <th>Editar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- No hay filas aquí inicialmente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        <div id="mensaje" style="display: none;"></div>
+        </form>
+    </div>
+    <script src="javas.js"></script>
+</body>
+</html>

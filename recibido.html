@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibido</title>
+    <style>
+        /* Estilos para centrar el contenido */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #efefef;
+        }
+        #content {
+            text-align: center;
+            border: 2px solid #000000;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgb(244, 244, 244)dbd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #08b47a;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Datos Recibidos</h1>
+        <form>
+            <div id="datos"></div>
+        </form>
+    </div>
+
+    <script>
+        // Obtener los datos de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const datosJSON = urlParams.get("datos");
+
+        if (datosJSON) {
+            const datos = JSON.parse(datosJSON);
+
+            // Mostrar los datos en la página
+            const datosDiv = document.getElementById("datos");
+            datosDiv.innerHTML = `
+                <p>Nombre: ${datos.nombre}</p>
+                <p>Correo: ${datos.correo}</p>
+                <p>Teléfono: ${datos.telefono}</p>
+                <p>Gusto: ${datos.gusto}</p>
+                <p>Porcentaje: ${datos.porcentaje}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
